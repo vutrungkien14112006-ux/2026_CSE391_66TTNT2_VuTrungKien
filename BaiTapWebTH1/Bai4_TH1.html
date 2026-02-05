@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài tập 04 - Form Nhân viên</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #fff; color: #333; line-height: 1.6; padding: 20px; }
+        .form-container { max-width: 800px; margin: 0 auto; border: 1px solid #ddd; padding: 20px; }
+        
+        h3 { border-bottom: 2px solid #333; padding-bottom: 5px; margin-top: 30px; font-size: 18px; }
+        
+        .form-group { display: flex; margin-bottom: 10px; align-items: flex-start; }
+        .label { width: 180px; font-weight: bold; font-size: 14px; flex-shrink: 0; }
+        .input-content { flex-grow: 1; }
+        
+        input[type="text"], input[type="email"], select, textarea {
+            width: 100%; padding: 5px; border: 1px solid #777; box-sizing: border-box;
+        }
+        
+        .radio-group, .checkbox-group { display: flex; flex-direction: column; gap: 5px; }
+        .radio-item, .checkbox-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        
+        /* Giao diện Editor giả lập cho phần Notes */
+        .notes-editor { border: 1px solid #ccc; padding: 10px; background: #fafafa; }
+        .editor-toolbar { border-bottom: 1px solid #ddd; padding-bottom: 5px; margin-bottom: 10px; font-size: 12px; color: #666; }
+
+        /* Captcha */
+        .captcha-box { background: #eee; padding: 10px; font-family: 'Courier New', monospace; font-weight: bold; font-size: 24px; letter-spacing: 5px; display: inline-block; margin-bottom: 5px; border: 1px dashed #999; }
+
+        /* Nút bấm ở cuối */
+        .footer-actions { border-top: 1px solid #ccc; padding-top: 15px; display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+        .btn { padding: 5px 15px; border: 1px solid #333; cursor: pointer; display: flex; align-items: center; gap: 5px; }
+        .btn-submit { background: #444; color: white; }
+        .btn-cancel { background: #444; color: white; }
+    </style>
+</head>
+<body>
+
+<div class="form-container">
+    <form>
+        <h3>Basic Info</h3>
+        <div class="form-group">
+            <div class="label">Employee ID</div>
+            <div class="input-content">9</div>
+        </div>
+        <div class="form-group">
+            <div class="label">Last Name</div>
+            <div class="input-content">Dodsworth</div>
+        </div>
+        <div class="form-group">
+            <div class="label">First Name</div>
+            <div class="input-content"><input type="text" value="Anne"></div>
+        </div>
+        <div class="form-group">
+            <div class="label">Gender</div>
+            <div class="input-content radio-group">
+                <label class="radio-item"><input type="radio" name="gender"> Male</label>
+                <label class="radio-item"><input type="radio" name="gender"> Female</label>
+                <label class="radio-item"><input type="radio" name="gender"> XXX</label>
+                <label class="radio-item"><input type="radio" name="gender" checked> ZZZ</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="label">Title</div>
+            <div class="input-content"><input type="text" value="Sales Representative"></div>
+        </div>
+        <div class="form-group">
+            <div class="label">Suffix</div>
+            <div class="input-content"><input type="text" value="Ms."></div>
+        </div>
+        <div class="form-group">
+            <div class="label">BirthDate</div>
+            <div class="input-content"><input type="text" value="1969-07-02 00:00:00"></div>
+        </div>
+        <div class="form-group">
+            <div class="label">Reports To</div>
+            <div class="input-content">
+                <select>
+                    <option>Buchanan</option>
+                    <option>Fuller</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>Contact Info</h3>
+        <div class="form-group">
+            <div class="label">Email</div>
+            <div class="input-content"><input type="email" placeholder="name@example.com"></div>
+        </div>
+        <div class="form-group">
+            <div class="label">Address</div>
+            <div class="input-content"><input type="text" value="7 Houndstooth Rd."></div>
+        </div>
+        <div class="form-group">
+            <div class="label">Country</div>
+            <div class="input-content">
+                <select>
+                    <option>Russian Federation</option>
+                    <option>United Kingdom</option>
+                    <option>Vietnam</option>
+                </select>
+            </div>
+        </div>
+
+        <h3>Optional Info</h3>
+        <div class="form-group">
+            <div class="label">Notes</div>
+            <div class="input-content">
+                <div class="notes-editor">
+                    <div class="editor-toolbar">B <i>I</i> <u>S</u> | Font Styles...</div>
+                    <textarea rows="4">Anne has a BA degree in English from St. Lawrence College. She is fluent in French and German.ZZZ</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="label">Preferred Shift</div>
+            <div class="input-content checkbox-group">
+                <label class="checkbox-item"><input type="checkbox"> Regular</label>
+                <label class="checkbox-item"><input type="checkbox" checked> Gravy Yard</label>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="label">Are you human?</div>
+            <div class="input-content">
+                <div class="captcha-box">TIDAWO</div>
+                <div><input type="text" style="width: 200px;"></div>
+                <small>Click to change</small>
+            </div>
+        </div>
+
+        <div class="footer-actions">
+            <button type="submit" class="btn btn-submit">💾 Submit</button>
+            <button type="button" class="btn btn-cancel">✖ Cancel</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
