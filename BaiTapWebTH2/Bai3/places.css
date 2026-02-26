@@ -1,0 +1,135 @@
+/* --- CSS CHUNG (Kế thừa từ bài 2) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background-color: #f4f7f8;
+}
+
+/* Header (Dùng chung style bài 2) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: #3e3e3e; /* Khác bài 2 một chút để nổi bật trên nền trắng */
+    width: 100%;
+}
+
+#page-logo a {
+    font-family: 'Oleo Script', cursive;
+    color: #f1c40f;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #f1c40f;
+    padding: 5px 15px;
+}
+
+/* --- NỘI DUNG CHÍNH (Bài tập 3) --- */
+#all-destinations {
+    max-width: 1100px;
+    margin: 60px auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+#all-destinations h1 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+#all-destinations p {
+    color: #666;
+    margin-bottom: 40px;
+}
+
+/* Grid danh sách điểm đến */
+#destinations-grid {
+    display: flex;
+    flex-wrap: wrap; /* Tự động xuống hàng */
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+}
+
+.destination-item {
+    width: 300px; /* Độ rộng cố định cho mỗi thẻ */
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.destination-item:hover {
+    transform: translateY(-10px); /* Hiệu ứng bay lên khi di chuột */
+}
+
+.destination-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.item-content {
+    padding: 20px;
+}
+
+.item-content h2 {
+    font-size: 1.4rem;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.item-content p {
+    color: #00bcd4;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 20px;
+    background-color: #f1c40f;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* --- FOOTER (Giống bài 2) --- */
+footer {
+    background-color: #1a1a1a;
+    padding: 40px 0;
+    margin-top: 50px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 40px;
+}
+
+footer img {
+    width: 35px;
+    filter: invert(1); /* Logo màu trắng */
+}
