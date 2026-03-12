@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký Tài Khoản</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <div id="registrationForm">
+            <h2>📝 Đăng Ký Tài Khoản</h2>
+            <form id="formRegister">
+                <div class="form-group">
+                    <label>Họ và tên</label>
+                    <input type="text" id="fullname" placeholder="Nhập họ và tên">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="text" id="email" placeholder="name@domain.com">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Số điện thoại</label>
+                    <input type="text" id="phone" placeholder="0xxxxxxxxx">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Mật khẩu</label>
+                    <input type="password" id="password" placeholder="Tối thiểu 8 ký tự">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Xác nhận mật khẩu</label>
+                    <input type="password" id="confirmPassword" placeholder="Nhập lại mật khẩu">
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group">
+                    <label>Giới tính:</label>
+                    <div class="radio-group">
+                        <input type="radio" name="gender" value="Nam" id="male"> <label for="male">Nam</label>
+                        <input type="radio" name="gender" value="Nữ" id="female"> <label for="female">Nữ</label>
+                    </div>
+                    <small class="error-msg"></small>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <input type="checkbox" id="terms">
+                    <label for="terms">Tôi đồng ý với điều khoản dịch vụ</label>
+                    <br><small class="error-msg"></small>
+                </div>
+
+                <button type="submit" id="btnSubmit">Đăng Ký</button>
+            </form>
+        </div>
+
+        <div id="successMessage" class="hidden">
+            <h2 style="color: #28a745;">Đăng ký thành công! 🎉</h2>
+            <p>Chào mừng, <span id="displayUser" style="font-weight: bold;"></span>!</p>
+            <button onclick="location.reload()">Quay lại</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

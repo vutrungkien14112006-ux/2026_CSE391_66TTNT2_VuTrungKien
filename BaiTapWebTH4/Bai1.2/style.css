@@ -1,0 +1,23 @@
+/* style.css */
+body { font-family: 'Segoe UI', sans-serif; background-color: #f8f9fa; display: flex; justify-content: center; padding: 20px; }
+.container { background: #fff; padding: 25px; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); width: 100%; max-width: 850px; }
+h2 { text-align: center; color: #1a73e8; }
+
+.input-form, .filter-controls { display: flex; gap: 10px; margin-bottom: 15px; }
+input, select { padding: 10px; border: 1px solid #ddd; border-radius: 5px; outline: none; }
+
+#txtName, #searchName { flex: 2; }
+#txtScore, #filterRank { flex: 1; }
+
+#btnAdd { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; cursor: pointer; font-weight: bold; }
+#btnAdd:hover { background: #218838; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+th, td { padding: 12px; border: 1px solid #eee; text-align: center; }
+th { background-color: #f1f3f4; }
+
+.low-score { background-color: #fff9c4 !important; }
+.btn-delete { background: #dc3545; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+.stats-box { margin-top: 20px; padding: 15px; background: #e8f0fe; border-radius: 5px; font-weight: bold; text-align: right; }
+#sortScore:hover { background-color: #e2e6ea; }

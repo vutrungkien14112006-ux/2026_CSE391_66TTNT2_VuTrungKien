@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Điểm Sinh Viên</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>📝 Quản Lý Điểm Sinh Viên</h2>
+
+        <div class="input-group">
+            <input type="text" id="txtName" placeholder="Họ tên sinh viên" autofocus>
+            <input type="number" id="txtScore" placeholder="Điểm (0-10)" step="0.1" min="0" max="10">
+            <button id="btnAdd">Thêm</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>STT</th>
+                    <th>Họ tên</th>
+                    <th>Điểm</th>
+                    <th>Xếp loại</th>
+                    <th>Thao tác</th>
+                </tr>
+            </thead>
+            <tbody id="studentBody">
+                </tbody>
+        </table>
+
+        <div class="stats" id="statsArea">
+            Tổng số sinh viên: 0 | Điểm trung bình: 0.00
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
